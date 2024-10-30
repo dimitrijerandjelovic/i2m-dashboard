@@ -1,0 +1,16 @@
+@if(horizontal$()) {
+<div class="w-full h-10 border border-[#00695C] relative rounded-sm">
+  <div
+    class="bg-[#00695C] absolute left-0 h-full"
+    [style.width.%]="(value$() / max$()) * 100"
+  ></div>
+</div>
+} @else {
+<div class="h-full w-10 border border-[#00695C] relative rounded-sm">
+  <div
+    class="bg-[#00695C] absolute bottom-0 w-full"
+    [style.height.%]="(value$() / max$()) * 100"
+  ></div>
+</div>
+
+}
